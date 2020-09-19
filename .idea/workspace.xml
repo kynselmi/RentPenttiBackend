@@ -2,33 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19556450-9861-4f00-84df-fad9aef5f0ab" name="Default Changelist" comment="Initial backend for RentPentti">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/RentPenttiApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/dao/Dao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/dao/impl/AbstractDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/dao/impl/BandDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/dao/impl/BandMemberDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/dao/impl/PaymentDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/dao/impl/PersonDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/model/Band.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/model/BandMember.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/model/BaseEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/model/Payment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/model/PaymentParty.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/model/PaymentRecord.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/model/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/model/ScheduledPayment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/service/Service.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/service/impl/AbstractService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/service/impl/BandMemberService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/service/impl/BandService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/service/impl/PaymentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/service/impl/PersonService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/web/controller/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/web/controller/impl/AbstractController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/web/controller/impl/BandMemberController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/web/controller/impl/ControllerConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/web/controller/impl/PaymentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/web/controller/impl/PersonController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/dao/impl/PaymentPartyDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/integration/Authorization.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/model/Rent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/model/ScheduledTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/service/impl/PaymentPartyService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/util/TaskScheduler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/web/controller/impl/PaymentPartyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/RentPenttiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/RentPenttiApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/dao/impl/BandDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/dao/impl/BandDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/model/Band.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/model/Band.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/model/BandMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/model/BandMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/model/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/model/Payment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/model/PaymentParty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/model/PaymentParty.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/model/PaymentRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/model/PaymentRecord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/model/ScheduledPayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/model/MonthlyPayment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/service/impl/BandService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/service/impl/BandService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/web/controller/impl/AbstractController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/web/controller/impl/AbstractController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/web/controller/impl/BandController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/web/controller/impl/BandController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/kingofnone/rentpentti/RentPenttiApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kingofnone/rentpentti/RentPenttiApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/kingofnone/rentpentti/model/Band.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kingofnone/rentpentti/model/Band.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/kingofnone/rentpentti/model/BandMember.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kingofnone/rentpentti/model/BandMember.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/kingofnone/rentpentti/model/BaseEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kingofnone/rentpentti/model/BaseEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/kingofnone/rentpentti/model/Payment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kingofnone/rentpentti/model/Payment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/kingofnone/rentpentti/model/PaymentParty.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kingofnone/rentpentti/model/PaymentParty.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/kingofnone/rentpentti/model/PaymentRecord.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kingofnone/rentpentti/model/PaymentRecord.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/kingofnone/rentpentti/model/ScheduledPayment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/kingofnone/rentpentti/service/impl/AbstractService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kingofnone/rentpentti/service/impl/AbstractService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/kingofnone/rentpentti/utility/DatabaseConnection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/kingofnone/rentpentti/utility/JdbcDatabaseConnection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/kingofnone/rentpentti/web/controller/impl/AbstractController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kingofnone/rentpentti/web/controller/impl/AbstractController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/kingofnone/rentpentti/web/controller/impl/BandMemberController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kingofnone/rentpentti/web/controller/impl/BandMemberController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/kingofnone/rentpentti/web/controller/impl/PersonController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kingofnone/rentpentti/web/controller/impl/PersonController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +70,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -136,18 +145,22 @@
     <option name="LAST_COMMIT_MESSAGE" value="Initial backend for RentPentti" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="765" y="230" key="#com.intellij.ide.util.MemberChooser" timestamp="1599693080134">
+    <state x="765" y="230" key="#com.intellij.ide.util.MemberChooser" timestamp="1600104730370">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="230" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1599693080134" />
+    <state x="765" y="230" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1600104730370" />
     <state x="669" y="273" key="#com.intellij.refactoring.memberPullUp.PullUpDialog" timestamp="1599649478326">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="669" y="273" key="#com.intellij.refactoring.memberPullUp.PullUpDialog/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1599649478326" />
-    <state x="756" y="380" width="444" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1599649825303">
+    <state x="756" y="380" width="444" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1599915431355">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="756" y="380" width="444" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1599649825303" />
+    <state x="756" y="380" width="444" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1599915431355" />
+    <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1599906148710">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1599906148710" />
     <state x="599" y="115" key="CommitChangelistDialog2" timestamp="1599694872702">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -164,38 +177,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="838" y="414" width="260" height="211" key="Github.ShareDialog/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1599694436265" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1599694746190">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1600554711175">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1599694746190" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1599694746190">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1600554711175" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1600554711175">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1599694746190" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1599694746190">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1600554711175" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1600554711175">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1599694746190" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1599694746190">
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1600554711175" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1600554711175">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1599694746190" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1599688401352">
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1600554711175" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1599695364916">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1599688401352" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1599688401352">
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1599695364916" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1599695364915">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1599688401352" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1599688401352">
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1599695364915" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1599695364915">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1599688401352" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1599688401352">
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1599695364915" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1599695364916">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1599688401352" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1599695364916" />
     <state x="461" y="163" key="SettingsEditor" timestamp="1599694633348">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -204,18 +217,33 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="254" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1599695074882" />
+    <state x="656" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1600543258919">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="656" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1600543258919" />
+    <state x="690" y="276" key="extract.method.dialog" timestamp="1600114446685">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="276" key="extract.method.dialog/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1600114446685" />
     <state x="656" y="118" width="607" height="804" key="find.popup" timestamp="1599691230076">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="656" y="118" width="607" height="804" key="find.popup/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1599691230076" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1599765874470">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1160@0.0.1920.1040" timestamp="1599765874470" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/web/controller/impl/AbstractController.java</url>
-          <line>40</line>
-          <option name="timeStamp" value="3" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/kingofnone/rentpentti/web/controller/impl/BandController.java</url>
+          <line>36</line>
+          <properties>
+            <option name="lambda-ordinal" value="0" />
+          </properties>
+          <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

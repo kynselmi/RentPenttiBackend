@@ -12,6 +12,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:3000")
 public class AbstractController<T extends BaseEntity> implements Controller<T> {
 
     protected Service<T> service;

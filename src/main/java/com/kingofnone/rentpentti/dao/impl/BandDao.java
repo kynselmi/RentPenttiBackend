@@ -5,7 +5,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public class BandDao extends AbstractDao<Band> {
-    public BandDao() {
-        setClazz(Band.class);
-    }
+    public BandDao() { setClazz(Band.class); }
 }

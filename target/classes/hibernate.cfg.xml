@@ -28,9 +28,12 @@
             thread
         </property>
 
-        <property name = "hbm2ddl.auto">
+        <!--
+        <property name = "hibernate.hbm2ddl.auto">
             create-drop
         </property>
+        -->
+
 
         <!-- Echo the SQL to stdout -->
         <property name = "show_sql">
@@ -42,5 +45,6 @@
         <mapping class="com.kingofnone.rentpentti.model.BandMember" />
         <mapping class="com.kingofnone.rentpentti.model.Payment" />
         <mapping class="com.kingofnone.rentpentti.model.PaymentParty" />
+        <mapping class="com.kingofnone.rentpentti.model.PaymentRecord" />
     </session-factory>
 </hibernate-configuration>

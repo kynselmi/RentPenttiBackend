@@ -1,26 +1,29 @@
 package com.kingofnone.rentpentti.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
-import java.util.List;
+import java.util.Set;
 
 @Entity
 public class BandMember extends Person {
-    @ManyToMany(cascade = CascadeType.ALL)
-    @JoinTable(joinColumns = @JoinColumn(referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(referencedColumnName = "id"))
-    private List<Band> bands;
+
+    @ManyToMany(targetEntity = Band.class, mappedBy = "members")
+    @JsonIgnore
+    private Set<Band> bands;
 
     public BandMember() {}
 
-    public BandMember(String firstName, String lastName, List<Band> bands) {
+    public BandMember(String firstName, String lastName, Set<Band> bands) {
         super(firstName, lastName);
         this.bands = bands;
     }
 
-    public List<Band> getBands() {
+    public Set<Band> getBands() {
         return bands;
     }
 
-    public void setBands(List<Band> bands) {
+    public void setBands(Set<Band> bands) {
         this.bands = bands;
     }
 }

@@ -1,8 +1,9 @@
 package com.kingofnone.rentpentti.model;
 
-import java.math.BigDecimal;
+import javax.persistence.Entity;
 import java.util.Date;
 
-public class ScheduledPayment extends Payment {
+@Entity
+public class MonthlyPayment extends Payment {
     private Date nextDueDate;
 }
