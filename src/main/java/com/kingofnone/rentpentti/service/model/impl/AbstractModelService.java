@@ -1,16 +1,14 @@
-package com.kingofnone.rentpentti.service.impl;
+package com.kingofnone.rentpentti.service.model.impl;
 
 import com.kingofnone.rentpentti.dao.Dao;
 import com.kingofnone.rentpentti.model.BaseEntity;
-import com.kingofnone.rentpentti.service.Service;
-import org.apache.catalina.core.ApplicationContext;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.kingofnone.rentpentti.service.model.ModelService;
 
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-public abstract class AbstractService<T extends BaseEntity> implements Service<T> {
+public abstract class AbstractModelService<T extends BaseEntity> implements ModelService<T> {
 
     protected Dao dao = null;
 
@@ -27,9 +25,9 @@ public abstract class AbstractService<T extends BaseEntity> implements Service<T
     }
 
     @Override
-    public T create(T entity) {
+    public Optional<T> create(T entity) {
         dao.create(entity);
-        return entity;
+        return Optional.of(entity);
     }
 
     @Override

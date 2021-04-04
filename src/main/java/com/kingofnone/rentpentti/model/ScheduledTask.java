@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 import java.text.SimpleDateFormat;
 
 @Component
-public class ScheduledTask implements Runnable{
+public class ScheduledTask implements Runnable {
 
     private static final Logger logger = LoggerFactory.getLogger(ScheduledTask.class);
 

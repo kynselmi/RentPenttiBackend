@@ -13,7 +13,7 @@
         </property>
 
         <property name = "hibernate.connection.url">
-            jdbc:mysql://localhost/rentpentti
+            jdbc:mysql://localhost/rentpentti?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;serverTimezone=EET
         </property>
 
         <property name = "hibernate.connection.username">
@@ -28,12 +28,9 @@
             thread
         </property>
 
-        <!--
         <property name = "hibernate.hbm2ddl.auto">
             create-drop
         </property>
-        -->
-
 
         <!-- Echo the SQL to stdout -->
         <property name = "show_sql">
@@ -46,5 +43,7 @@
         <mapping class="com.kingofnone.rentpentti.model.Payment" />
         <mapping class="com.kingofnone.rentpentti.model.PaymentParty" />
         <mapping class="com.kingofnone.rentpentti.model.PaymentRecord" />
+        <mapping class="com.kingofnone.rentpentti.model.FileImport" />
+
     </session-factory>
 </hibernate-configuration>

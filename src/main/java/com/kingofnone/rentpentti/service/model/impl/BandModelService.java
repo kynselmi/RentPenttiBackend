@@ -1,9 +1,10 @@
-package com.kingofnone.rentpentti.service.impl;
+package com.kingofnone.rentpentti.service.model.impl;
 
 import com.kingofnone.rentpentti.dao.impl.BandDao;
-import com.kingofnone.rentpentti.dao.impl.BandMemberDao;
 import com.kingofnone.rentpentti.model.Band;
 import com.kingofnone.rentpentti.model.BandMember;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Service;
 
 import java.util.Collections;
@@ -12,8 +13,10 @@ import java.util.Optional;
 import java.util.Set;
 
 @Service
-public class BandService extends AbstractService<Band> {
-    public BandService() {
+public class BandModelService extends AbstractModelService<Band> {
+    private static final Logger logger = LogManager.getLogger(BandModelService.class);
+
+    public BandModelService() {
         setDao(new BandDao());
     }
 
@@ -23,6 +26,7 @@ public class BandService extends AbstractService<Band> {
     }
 
     public void addMemberToBand(BandMember bandMember, long bandId) {
+        logger.info("Start adding band member ["+bandMember.toString()+"]to band ["+bandId+"]");
         Optional<Band> bandOptional = getById(bandId);
         if (bandOptional.isEmpty()) {
             return;

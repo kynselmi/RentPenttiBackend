@@ -1,6 +1,8 @@
-package com.kingofnone.rentpentti.service.impl;
+package com.kingofnone.rentpentti.service.model.impl;
 
 import com.kingofnone.rentpentti.model.PaymentRecord;
+import org.springframework.stereotype.Service;
 
-public class PaymentRecordService extends AbstractService<PaymentRecord> {
+@Service
+public class PaymentRecordModelService extends AbstractModelService<PaymentRecord> {
 }

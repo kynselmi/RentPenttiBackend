@@ -5,11 +5,11 @@ import java.util.List;
 import java.util.Optional;
 
 public interface Dao<T extends Serializable> {
-    List getAll();
+    List<T> getAll();
 
-    Optional get(long id);
+    Optional<T> get(long id);
 
-    T create(T entity);
+    Optional<T> create(T entity);
 
     T update(T entity);
 
@@ -18,4 +18,6 @@ public interface Dao<T extends Serializable> {
     void deleteById(long id);
 
     void safeDelete(T entity);
+
+    Optional<T> findByAttribute(String attribute, Object value);
 }

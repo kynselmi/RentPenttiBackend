@@ -1,4 +1,4 @@
 package com.kingofnone.rentpentti.model;
 
-public class Model {
+public interface Model {
 }

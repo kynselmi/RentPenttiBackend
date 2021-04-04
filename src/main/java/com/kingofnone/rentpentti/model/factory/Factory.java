@@ -1,4 +1,4 @@
-package com.kingofnone.rentpentti.model.factory.impl;
+package com.kingofnone.rentpentti.model.factory;
 
 public interface Factory<T> {
 

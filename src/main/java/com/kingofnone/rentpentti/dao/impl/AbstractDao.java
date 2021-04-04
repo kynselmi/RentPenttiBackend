@@ -2,11 +2,13 @@ package com.kingofnone.rentpentti.dao.impl;
 
 import com.kingofnone.rentpentti.dao.Dao;
 import com.kingofnone.rentpentti.model.BaseEntity;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.exception.ConstraintViolationException;
 
-import javax.persistence.NoResultException;
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
@@ -17,7 +19,9 @@ import java.util.Optional;
 
 public abstract class AbstractDao<T extends BaseEntity> implements Dao<T> {
 
-    private SessionFactory sessionFactory;
+    private static final Logger logger = LogManager.getLogger(AbstractDao.class);
+
+    private final SessionFactory sessionFactory;
 
     private Class<T> clazz;
 
@@ -25,51 +29,42 @@ public abstract class AbstractDao<T extends BaseEntity> implements Dao<T> {
         sessionFactory = new Configuration().configure().buildSessionFactory();
     }
 
-    private Session openSession() {
+    protected Session openSession() {
         return sessionFactory.openSession();
     }
 
     @Override
-    public List getAll() {
+    public List<T> getAll() {
         Session session = openSession();
         session.beginTransaction();
         CriteriaBuilder criteriaBuilder = session.getCriteriaBuilder();
         CriteriaQuery<T> criteriaQuery = criteriaBuilder.createQuery(clazz);
         TypedQuery<T> allQuery = session.createQuery(criteriaQuery.select(criteriaQuery.from(clazz)));
-        List results = allQuery.getResultList();
+        List<T> results = allQuery.getResultList();
         session.close();
         return results;
     }
 
     @Override
-    public Optional get(long id) {
-        Session session = openSession();
-        Optional resultOptional = Optional.empty();
-        try {
-            session.beginTransaction();
-            CriteriaBuilder criteriaBuilder = session.getCriteriaBuilder();
-            CriteriaQuery<T> criteriaQuery = criteriaBuilder.createQuery(clazz);
-            Root<T> rootQuery = criteriaQuery.from(clazz);
-            Predicate idEquals = criteriaBuilder.equal(rootQuery.get("id"), id);
-            TypedQuery<T> getQuery = session.createQuery(criteriaQuery.select(rootQuery).where(idEquals));
-            T result = getQuery.getSingleResult();
-            resultOptional = Optional.ofNullable(result);
-        } catch (NoResultException e) {
-
-        } finally {
-            session.close();
-        }
-        return resultOptional;
+    public Optional<T> get(long id) {
+        return findByAttribute("id", id);
     }
 
     @Override
-    public T create(final T entity) {
+    public Optional<T> create(final T entity) {
         Session session = openSession();
-        session.beginTransaction();
-        session.save(entity);
-        session.getTransaction().commit();
-        session.close();
-        return entity;
+        try {
+            session.beginTransaction();
+            session.save(entity);
+            session.getTransaction().commit();
+            session.close();
+        } catch (ConstraintViolationException e) {
+            logger.error("Failed to create entity because entity with unique values was already found in database");
+            return Optional.empty();
+        } finally {
+            session.close();
+        }
+        return Optional.of(entity);
     }
 
     @Override
@@ -92,8 +87,22 @@ public abstract class AbstractDao<T extends BaseEntity> implements Dao<T> {
     }
 
     @Override
+    public Optional<T> findByAttribute(final String attribute, final Object value) {
+        Session session = openSession();
+        session.beginTransaction();
+        CriteriaBuilder criteriaBuilder = session.getCriteriaBuilder();
+        CriteriaQuery<T> criteriaQuery = criteriaBuilder.createQuery(clazz);
+        Root<T> rootQuery = criteriaQuery.from(clazz);
+        Predicate idEquals = criteriaBuilder.equal(rootQuery.get(attribute), value);
+        TypedQuery<T> getQuery = session.createQuery(criteriaQuery.select(rootQuery).where(idEquals));
+        T result = getQuery.getSingleResult();
+
+        return Optional.ofNullable(result);
+    }
+
+    @Override
     public void deleteById(final long id) {
-        get(id).ifPresent(entity -> delete((T)entity));
+        get(id).ifPresent(this::delete);
     }
 
     @Override

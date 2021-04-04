@@ -1,6 +1,6 @@
 package com.kingofnone.rentpentti.web.controller.impl;
 
-import com.kingofnone.rentpentti.service.impl.PersonService;
+import com.kingofnone.rentpentti.service.model.impl.PersonModelService;
 import com.kingofnone.rentpentti.model.Person;
 import org.springframework.web.bind.annotation.*;
 
@@ -8,6 +8,6 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/person")
 public class PersonController extends AbstractController<Person> {
     public PersonController() {
-        setService(new PersonService());
+        setService(new PersonModelService());
     }
 }

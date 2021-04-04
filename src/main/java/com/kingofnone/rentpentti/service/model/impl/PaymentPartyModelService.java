@@ -1,20 +1,21 @@
-package com.kingofnone.rentpentti.service.impl;
+package com.kingofnone.rentpentti.service.model.impl;
 
 import com.kingofnone.rentpentti.dao.impl.PaymentPartyDao;
-import com.kingofnone.rentpentti.model.Payment;
 import com.kingofnone.rentpentti.model.PaymentParty;
 import com.kingofnone.rentpentti.model.Person;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-public class PaymentPartyService extends AbstractService<PaymentParty> {
-    private static final Logger logger = LoggerFactory.getLogger(PaymentPartyService.class);
+@Service
+public class PaymentPartyModelService extends AbstractModelService<PaymentParty> {
+    private static final Logger logger = LoggerFactory.getLogger(PaymentPartyModelService.class);
 
-    public PaymentPartyService() {
+    public PaymentPartyModelService() {
         setDao(new PaymentPartyDao());
     }
 

@@ -12,7 +12,7 @@ public interface Controller<T extends BaseEntity> {
     List<T> findAll();
 
     @PostMapping(value = "", consumes = ControllerConstants.APPLICATION_JSON, produces = ControllerConstants.APPLICATION_JSON)
-    T create(@RequestBody T entity);
+    ResponseEntity<T> create(@RequestBody T entity);
 
     @GetMapping(value = "/{id}", produces = ControllerConstants.APPLICATION_JSON)
     ResponseEntity<T> getById(@PathVariable long id);

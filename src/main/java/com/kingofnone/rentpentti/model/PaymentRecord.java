@@ -11,6 +11,9 @@ public class PaymentRecord extends BaseEntity {
     private Date payedDate;
 
     public boolean isPayed() {
+        if (payedDate == null) {
+            return false;
+        }
         return payedDate.before(new Date(System.currentTimeMillis()*1000));
     }
 

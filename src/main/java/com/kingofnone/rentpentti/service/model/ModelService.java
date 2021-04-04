@@ -1,16 +1,16 @@
-package com.kingofnone.rentpentti.service;
+package com.kingofnone.rentpentti.service.model;
 
 import com.kingofnone.rentpentti.model.BaseEntity;
 
 import java.util.List;
 import java.util.Optional;
 
-public interface Service<T extends BaseEntity> {
+public interface ModelService<T extends BaseEntity> {
     List<T> findAll();
 
     List<T> findAllActive();
 
-    T create(T entity);
+    Optional<T> create(T entity);
 
     Optional<T> getById(Long id);
 

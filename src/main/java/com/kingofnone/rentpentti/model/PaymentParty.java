@@ -6,6 +6,7 @@ import java.util.Set;
 
 @Entity
 public class PaymentParty extends BaseEntity {
+
     private String name;
     @OneToMany
     private Set<Person> responsiblePersonnel;
