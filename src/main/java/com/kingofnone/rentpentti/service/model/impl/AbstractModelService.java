@@ -3,6 +3,8 @@ package com.kingofnone.rentpentti.service.impl;
 import com.kingofnone.rentpentti.dao.Dao;
 import com.kingofnone.rentpentti.model.BaseEntity;
 import com.kingofnone.rentpentti.service.Service;
+import org.apache.catalina.core.ApplicationContext;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 import java.util.Optional;
@@ -10,7 +12,7 @@ import java.util.stream.Collectors;
 
 public abstract class AbstractService<T extends BaseEntity> implements Service<T> {
 
-    protected Dao dao;
+    protected Dao dao = null;
 
     @Override
     public List<T> findAll() {

@@ -4,8 +4,12 @@ import com.kingofnone.rentpentti.dao.impl.PaymentDao;
 import com.kingofnone.rentpentti.model.Payment;
 import org.springframework.stereotype.Service;
 
-@Service
+import javax.annotation.Resource;
+
+@Service("paymentService")
 public class PaymentService extends AbstractService<Payment> {
+    @Resource
+    PaymentDao dao;
     public PaymentService() {
         setDao(new PaymentDao());
     }

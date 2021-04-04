@@ -1,6 +1,7 @@
 package com.kingofnone.rentpentti.service.impl;
 
 import com.kingofnone.rentpentti.dao.impl.PaymentPartyDao;
+import com.kingofnone.rentpentti.model.Payment;
 import com.kingofnone.rentpentti.model.PaymentParty;
 import com.kingofnone.rentpentti.model.Person;
 import org.slf4j.Logger;
@@ -29,5 +30,10 @@ public class PaymentPartyService extends AbstractService<PaymentParty> {
                 .filter(Optional::isPresent)
                 .map(Optional::get).collect(Collectors.toSet()));
         dao.update(paymentParty);
+    }
+
+    public Optional<PaymentParty> getByName(String name) {
+        return this.dao.findByAttribute("name", name);
+
     }
 }
