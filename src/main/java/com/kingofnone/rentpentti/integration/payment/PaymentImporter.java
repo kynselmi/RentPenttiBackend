@@ -39,8 +39,8 @@ public class PaymentImporter {
     private CsvReader csvReader;
 
     /**
-     * Imports bank payments from CSV file to the database. CSV file may container header which is skipped with
-     * headerIncluded parameter. Importing will be cancelled and a exception is thrown if there are problems
+     * Imports bank payments from CSV file to the database. CSV file may contain header which is skipped with
+     * headerIncluded parameter. Importing will be cancelled and an exception is thrown if there are problems
      * in parsing the CSV
      * @param file import file as CSV
      * @param receiver name of the payment receiver

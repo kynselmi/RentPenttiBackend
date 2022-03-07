@@ -36,9 +36,14 @@ public abstract class AbstractModelService<T extends BaseEntity> implements Mode
     }
 
     @Override
-    public T updateById(Long id, T entity) {
+    public Optional<T> update(T entity) {
+        return dao.update(entity);
+    }
+
+    @Override
+    public Optional<T> updateById(Long id, T entity) {
         entity.setId(id);
-        return (T) dao.update(entity);
+        return dao.update(entity);
     }
 
     @Override

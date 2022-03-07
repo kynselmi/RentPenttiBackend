@@ -49,8 +49,10 @@ public class AbstractController<T extends BaseEntity> implements Controller<T> {
     }
 
     @Override
-    public T update(@PathVariable long id, @RequestBody T entity) {
-        return modelService.updateById(id, entity);
+    public ResponseEntity<T> update(@PathVariable long id, @RequestBody T entity) {
+        Optional<T> optional = modelService.updateById(id, entity);
+        HttpHeaders headers = new HttpHeaders();
+        return optional.isEmpty() ? new ResponseEntity<>(null, headers, HttpStatus.BAD_REQUEST) : new ResponseEntity<>(entity, headers, HttpStatus.OK);
     }
 
     @Override

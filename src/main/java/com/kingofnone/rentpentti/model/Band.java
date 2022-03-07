@@ -9,6 +9,7 @@ public class Band extends BaseEntity implements Model {
 
     @Column(unique = true)
     private String name;
+
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable(joinColumns = @JoinColumn(referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(referencedColumnName = "id"))
     private Set<BandMember> members;

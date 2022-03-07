@@ -13,6 +13,9 @@ import java.util.Optional;
 import java.util.Set;
 
 @Service
+/**
+ * Service to handle operations for {@link BandModel}
+ */
 public class BandModelService extends AbstractModelService<Band> {
     private static final Logger logger = LogManager.getLogger(BandModelService.class);
 
@@ -20,6 +23,11 @@ public class BandModelService extends AbstractModelService<Band> {
         setDao(new BandDao());
     }
 
+    /**
+     * Fetches {@link BandMember}s for band with id
+     * @param bandId id of the band
+     * @return {@link Set} of band members or empty set if there are no members set
+     */
     public Set<BandMember> getMembersById(Long bandId) {
         Optional<Band> bandOptional = getById(bandId);
         return bandOptional.isPresent() ? bandOptional.get().getMembers() : Collections.emptySet();

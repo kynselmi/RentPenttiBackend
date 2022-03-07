@@ -1,14 +1,14 @@
 package com.kingofnone.rentpentti.model;
 
-import javax.persistence.Entity;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.Set;
 
 @Entity
 public class PaymentParty extends BaseEntity {
 
+    @Column(unique = true)
     private String name;
-    @OneToMany
+    @OneToMany(fetch = FetchType.EAGER)
     private Set<Person> responsiblePersonnel;
 
     public String getName() {

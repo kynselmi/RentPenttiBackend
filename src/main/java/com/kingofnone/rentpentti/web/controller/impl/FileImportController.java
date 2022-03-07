@@ -59,7 +59,7 @@ public class FileImportController extends AbstractController<FileImport> {
         fileImport.setFilePath(storedFile.get().getPath());
         fileImport.setSuccessfullyImported(true);
         fileImportService.create(fileImport);
-        redirectAttributes.addFlashAttribute("message", "File imported succesfully");
+        redirectAttributes.addFlashAttribute("message", "File imported successfully");
 
         return "redirect:/";
     }

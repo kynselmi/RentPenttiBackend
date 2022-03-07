@@ -13,15 +13,15 @@
         </property>
 
         <property name = "hibernate.connection.url">
-            jdbc:mysql://localhost/rentpentti?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;serverTimezone=EET
+            jdbc:mysql://localhost:3306/rentpentti?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;serverTimezone=EET
         </property>
 
         <property name = "hibernate.connection.username">
-            rentpentti
+            root
         </property>
 
         <property name = "hibernate.connection.password">
-            0416rEyszAgcsVu0rsV6
+            root
         </property>
 
         <property name = "hibernate.current_session_context_class">
@@ -37,13 +37,13 @@
             true
         </property>
 
-        <mapping class="com.kingofnone.rentpentti.model.Person" />
         <mapping class="com.kingofnone.rentpentti.model.Band" />
         <mapping class="com.kingofnone.rentpentti.model.BandMember" />
+        <mapping class="com.kingofnone.rentpentti.model.FileImport" />
         <mapping class="com.kingofnone.rentpentti.model.Payment" />
         <mapping class="com.kingofnone.rentpentti.model.PaymentParty" />
         <mapping class="com.kingofnone.rentpentti.model.PaymentRecord" />
-        <mapping class="com.kingofnone.rentpentti.model.FileImport" />
+        <mapping class="com.kingofnone.rentpentti.model.Person" />
 
     </session-factory>
 </hibernate-configuration>

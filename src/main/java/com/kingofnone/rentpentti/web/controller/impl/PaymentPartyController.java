@@ -19,7 +19,7 @@ public class PaymentPartyController extends AbstractController<PaymentParty> {
     private PaymentPartyModelService paymentPartyService;
 
     public PaymentPartyController() {
-        setService(paymentPartyService);
+        setService(new PaymentPartyModelService());
     }
 
     @GetMapping(value = "/{id}/personnel", produces = ControllerConstants.APPLICATION_JSON)

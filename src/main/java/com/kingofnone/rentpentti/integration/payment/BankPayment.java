@@ -118,6 +118,6 @@ public class BankPayment {
                 Reference Number: %s
                 Balance: %s
                 Currency: %s
-                """.formatted(amount, payerIBAN, receiverIBAN, payerName, title, referenceNumber, balance, currency);
+                """.formatted(transactionDate, amount, payerIBAN, receiverIBAN, payerName, title, referenceNumber, balance, currency);
     }
 }

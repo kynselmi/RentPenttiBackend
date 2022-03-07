@@ -14,7 +14,9 @@ public interface ModelService<T extends BaseEntity> {
 
     Optional<T> getById(Long id);
 
-    T updateById(Long id, T entity);
+    Optional<T> update(T entity);
+
+    Optional<T> updateById(Long id, T entity);
 
     void deleteById(Long id);
 }

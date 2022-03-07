@@ -11,7 +11,7 @@ public interface Dao<T extends Serializable> {
 
     Optional<T> create(T entity);
 
-    T update(T entity);
+    Optional<T> update(T entity);
 
     void delete(T entity);
 

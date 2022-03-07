@@ -68,13 +68,13 @@ public abstract class AbstractDao<T extends BaseEntity> implements Dao<T> {
     }
 
     @Override
-    public T update(final T entity) {
+    public Optional<T> update(final T entity) {
         Session session = openSession();
         session.beginTransaction();
-        session.merge(entity);
+        T updatedEntity = (T) session.merge(entity);
         session.getTransaction().commit();
         session.close();
-        return entity;
+        return Optional.of(updatedEntity);
     }
 
     @Override

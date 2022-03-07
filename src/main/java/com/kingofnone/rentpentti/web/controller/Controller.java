@@ -18,7 +18,7 @@ public interface Controller<T extends BaseEntity> {
     ResponseEntity<T> getById(@PathVariable long id);
 
     @PutMapping(value = "/{id}", consumes = ControllerConstants.APPLICATION_JSON, produces = ControllerConstants.APPLICATION_JSON)
-    T update(@PathVariable long id, @RequestBody T entity);
+    ResponseEntity<T> update(@PathVariable long id, @RequestBody T entity);
 
     @DeleteMapping(value = "/{id}", produces = ControllerConstants.APPLICATION_JSON)
     void delete(@PathVariable long id);
